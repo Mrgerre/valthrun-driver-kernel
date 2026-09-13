@@ -131,17 +131,13 @@ pub fn initialize_nt_offsets() -> anyhow::Result<()> {
                 0x01,
                 0x05,
             ),
-            Signature::relative_address(
+            Signature::pattern(
                 obfstr!("MmVerifyCallbackFunctionFlags (Win 11)"),
                 obfstr!("48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC 20 8B FA 48 8B F1"),
-                0x00,
-                0x00,
             ),
-            Signature::relative_address(
+            Signature::pattern(
                 obfstr!("MmVerifyCallbackFunctionFlags"),
                 obfstr!("E8 ?? ?? ?? ?? 85 C0 0F 84 ?? ?? ?? ?? 48 8B 4D 00"),
-                0x01,
-                0x05,
             ),
         ]
         .iter()
