@@ -93,7 +93,7 @@ jobs:
       - name: Build UEFI Driver
         run: ./.github/workflows/build-driver-uefi.ps1
 
-      - uses: upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         id: uefi-driver-artifact
         with:
           name: valthrun-driver-uefi
